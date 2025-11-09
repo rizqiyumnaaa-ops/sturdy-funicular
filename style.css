@@ -1,0 +1,747 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+/* ==================================== */
+/* 1. HEADER & NAVBAR (Gaya Layar Besar) */
+/* ==================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 30px;
+}
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+}
+.main-nav ul li a:hover {
+    color: #e06c75;
+}
+
+/* ==================================== */
+/* 2. HERO SECTION (Gaya Layar Besar) */
+/* ==================================== */
+.hero-section {
+    width: 100%;
+    /* Ganti path gambar sesuai lokasi file Anda */
+    background: url('img/1.png') no-repeat center center/cover; 
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* ----- ANIMASI FADE-IN HERO SECTION ----- */
+.hero-content p.pre-title {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out backwards; /* Terapkan animasi */
+}
+.hero-content h2 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out 0.3s backwards; /* Jeda 0.3s */
+}
+.cta-button {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Ubah transisi menjadi 'all' untuk efek tombol */
+    display: inline-block;
+    animation: fadeIn 1s ease-out 0.6s backwards; /* Jeda 0.6s */
+}
+.cta-button:hover {
+    background-color: #e06c75; /* Efek Hover Baru */
+    color: #fff;
+    border-color: #e06c75;
+}
+/* -------------------------------------- */
+
+
+/* ===================================== */
+/* 3. MUSIC SECTION/DISCOGRAPHY (GRID) */
+/* ===================================== */
+.music-section {
+    padding: 80px 50px;
+    text-align: center;
+}
+.music-section h3 {
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.album-grid {
+    display: flex; 
+    justify-content: space-around;
+    gap: 30px; 
+}
+.album-item {
+    width: 30%; 
+    text-align: center;
+}
+.album-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    /* --- EFEK ZOOM GAMBAR --- */
+    transition: transform 0.3s ease-in-out; 
+    /* ------------------------ */
+}
+.album-item img:hover {
+    transform: scale(1.05); /* Gambar membesar 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.album-item h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.album-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.listen-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    /* --- EFEK TOMBOL BARU --- */
+    transition: all 0.3s ease; 
+    /* ------------------------ */
+}
+.listen-button:hover {
+    background-color: #e06c75; /* Ganti warna hover */
+    color: #fff;
+    border-color: #e06c75;
+}
+
+/* ==================================== */
+/* 4. FOOTER (Gaya Layar Besar) */
+/* ==================================== */
+.main-footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 40px 50px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer-social a {
+    color: #ccc; 
+    text-decoration: none; 
+    margin: 0 15px;
+    transition: color 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer-social a:hover {
+    color: #fff;
+}
+.footer-social {
+    margin-bottom: 25px;
+}
+.copyright {
+    margin-bottom: 5px;
+}
+.disclaimer {
+    color: #777;
+    font-size: 12px;
+}
+
+/* ==================================== */
+/* 5. ABOUT SECTION (Gaya Layar Besar) */
+/* ==================================== */
+.about-section {
+    padding: 80px 50px;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-text {
+    flex: 2;
+}
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.about-text h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+.about-text h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+}
+.about-text ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* ==================================== */
+/* 6. MUSIC PAGE SPECIFIC STYLING */
+/* ==================================== */
+.music-page-header {
+    text-align: center;
+    padding: 60px 50px 30px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+.music-page-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.music-page-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.music-list-section {
+    padding: 60px 50px;
+}
+.album-grid-full {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.album-item-full {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+.album-item-full img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.album-info h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.album-info .album-year {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+.album-info .album-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.stream-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #000;
+    margin-right: 10px;
+    /* --- EFEK TOMBOL BARU --- */
+    transition: all 0.3s ease; 
+    /* ------------------------ */
+}
+.stream-button.secondary {
+    background-color: #fff;
+    color: #000;
+}
+.stream-button:hover {
+    background-color: #e06c75;
+    color: #fff;
+    border-color: #e06c75;
+}
+
+/* ==================================== */
+/* 7. NEWS PAGE SPECIFIC STYLING */
+/* ==================================== */
+.news-page-header {
+    text-align: center;
+    padding: 60px 50px 30px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+.news-page-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.news-page-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.news-list-section {
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.news-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; 
+    transition: box-shadow 0.3s;
+}
+.news-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.news-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    /* --- EFEK ZOOM GAMBAR BERITA --- */
+    transition: transform 0.4s ease-out; 
+    /* ------------------------------ */
+}
+.news-item:hover img {
+    transform: scale(1.03); /* Gambar berita membesar sedikit saat hover pada kotaknya */
+}
+.news-content {
+    padding: 20px;
+}
+.news-date {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.news-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.news-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.read-more {
+    display: inline-block;
+    color: #e06c75;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==================================== */
+/* 8. CONTACT PAGE SPECIFIC STYLING */
+/* ==================================== */
+.contact-page-header {
+    text-align: center;
+    padding: 60px 50px 30px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+.contact-page-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.contact-page-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-section {
+    padding: 60px 50px;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contact-form-area {
+    flex: 2; 
+}
+.contact-info-area {
+    flex: 1; 
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 8px;
+}
+.contact-form-area h2,
+.contact-info-area h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.contact-form textarea {
+    resize: vertical; 
+}
+.submit-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transisi tombol Kontak */
+}
+.submit-button:hover {
+    background-color: #e06c75;
+}
+.info-item {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.info-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.info-item p,
+.info-item address {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+.info-item address {
+    font-style: normal; 
+}
+.info-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* =============================== */
+/* 9. MEDIA QUERY untuk Responsiveness */
+/* =============================== */
+@media (max-width: 768px) {
+    
+    /* Header/Navbar Responsive */
+    .main-header {
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+    .main-nav ul li a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    /* Hero Section Responsive */
+    .hero-section {
+        height: 60vh;
+    }
+    .hero-content h2 {
+        font-size: 40px;
+    }
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    /* Music Section (Homepage) Responsive */
+    .music-section {
+        padding: 40px 20px;
+    }
+    .album-grid {
+        flex-direction: column; 
+        gap: 40px;
+    }
+    .album-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* About Section Responsive */
+    .about-container {
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px;
+    }
+    .about-image {
+        order: -1; 
+        text-align: center;
+    }
+    .about-text {
+        order: 0;
+        text-align: left;
+    }
+    .about-image img {
+        max-width: 80%;
+    }
+    .about-text h1 {
+        font-size: 30px;
+    }
+
+    /* Music Page Responsive */
+    .music-list-section {
+        padding: 40px 20px;
+    }
+    .album-grid-full {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    .album-item-full {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    .album-item-full img {
+        width: 120px;
+        height: 120px;
+    }
+    .album-info {
+        text-align: center;
+    }
+
+    /* News Page Responsive */
+    .news-list-section {
+        padding: 40px 20px;
+    }
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .news-item img {
+        height: 180px;
+    }
+    
+    /* Contact Page Responsive */
+    .contact-section {
+        padding: 40px 20px;
+    }
+    .contact-container {
+        flex-direction: column; 
+        gap: 40px;
+    }
+    .contact-info-area {
+        order: -1; 
+        padding: 20px;
+    }
+
+
+    /* Footer Responsive */
+    .main-footer {
+        padding: 30px 20px;
+    }
+    .footer-social a {
+        display: block; 
+        margin: 10px 0;
+    }
+}
+
+
+/* ==================================== */
+/* 10. CSS KEYFRAMES (Animasi Kustom) */
+/* ==================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================================== */
+/* 11. SINGLE ARTICLE PAGE STYLING */
+/* ==================================== */
+.single-article-container {
+    /* Batasi lebar konten agar nyaman dibaca (max-width) */
+    max-width: 800px; 
+    margin: 40px auto; /* Memberi margin atas/bawah dan tengah di layar besar */
+    padding: 0 30px; /* Padding samping untuk layar kecil */
+}
+
+/* Judul Artikel */
+.article-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Meta Info (Tanggal, Penulis) */
+.article-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Breadcrumb */
+.article-breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.article-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+.article-breadcrumb a:hover {
+    color: #e06c75;
+}
+
+
+/* Gambar Utama Artikel */
+.article-image {
+    margin: 30px 0; 
+    overflow: hidden; 
+    border-radius: 8px;
+    /* Tambahkan Batasan Tambahan (Opsional, jika 800px belum cukup) */
+    /* max-width: 100%; */ 
+}
+.article-image img {
+    /* Nilai ini sudah benar, memastikan gambar mengisi 100% dari kontainer .article-image */
+    width: 100%; 
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; 
+}
+.article-image img:hover {
+    transform: scale(1.02); 
+}
+
+/* Isi Artikel (Paragraf) */
+.article-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    padding-bottom: 50px;
+}
+.article-body p {
+    margin-bottom: 25px;
+}
+
+/* Sub-heading di dalam konten */
+.article-body h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* MEDIA QUERY untuk Responsiveness (Tambahkan ke dalam @media (max-width: 768px) yang sudah ada) */
+@media (max-width: 768px) {
+    .single-article-container {
+        padding: 0 15px; /* Mengurangi padding samping di ponsel */
+        margin: 20px auto;
+    }
+    .article-title {
+        font-size: 32px;
+    }
+    .article-body {
+        font-size: 16px;
+    }
+}
